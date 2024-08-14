@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Theme Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal" id="terminal">
+        <div class="terminal-header">
+            <div class="buttons">
+                <span class="close" title="Close">x</span>
+                <span class="minimize" id="minimize" title="Minimize">&#x2015;</span>
+                <span class="maximize" id="maximize" title="Maximize" style="font-size: 6px;">&#x2610;</span>
+            </div>
+            <div class="title">Terminal - My Personal Website</div>
+        </div>
+        <div class="terminal-body">
+            <div class="terminal-content" id="terminal-content">
+                <!-- Initial landing text will be displayed by JavaScript -->
+            </div>
+        </div>
+        <div class="terminal-input">
+            <span class="prompt">$</span>
+            <input type="text" id="terminal-input" autofocus>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

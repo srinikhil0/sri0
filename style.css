@@ -1,0 +1,131 @@
+body {
+    background-color: #1d1f21;
+    background-image: radial-gradient(circle at top left, #2d2f31, #1d1f21);
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal {
+    background-color: #000;
+    border-radius: 10px;
+    width: 800px;
+    height: 500px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), inset 0 0 20px rgba(0, 255, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.terminal.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+}
+
+.terminal-header {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+}
+
+.close {
+    background-color: #ff5f56;
+}
+
+.minimize {
+    background-color: #ffbd2e;
+}
+
+.maximize {
+    background-color: #27c93f;
+}
+
+.title {
+    color: #fff;
+    font-size: 14px;
+}
+
+.terminal-body {
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+    background-color: #000;
+}
+
+.terminal-content {
+    white-space: pre-wrap;
+}
+
+.terminal-input {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+    border-top: 1px solid #333;
+}
+
+.prompt {
+    margin-right: 10px;
+}
+
+#terminal-input {
+    background: none;
+    border: none;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+
+/* Tooltip styles */
+.buttons span[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    font-size: 10px;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.buttons span[title]:hover::after {
+    opacity: 1;
+}
